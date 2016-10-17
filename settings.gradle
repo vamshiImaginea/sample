@@ -1,0 +1,3 @@
+include ":libraries:api", ":common", ":libraries:app"
+rootProject.name = '1'
+

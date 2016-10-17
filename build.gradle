@@ -1,0 +1,33 @@
+subprojects {
+
+  apply plugin: "java"
+ 
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+     testCompile "junit:junit:4+"
+  }
+}
+group 'Sample'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'org.sonarqube'
+
+
+sourceCompatibility = 1.5
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:+"
+    }
+}
+
